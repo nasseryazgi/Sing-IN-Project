@@ -1,4 +1,6 @@
 import 'package:app_project_singin/constant.dart';
+import 'package:app_project_singin/generated/assets.dart';
+import 'package:app_project_singin/screens/onboarding.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -10,14 +12,37 @@ class SplashView extends StatefulWidget {
 }
 
 class _SplashViewState extends State<SplashView> {
+  void inintState(){
+    super.initState();
+    Future.delayed(const Duration(seconds: 1),(){
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (c)=> Onborading()));
+    }
+
+    );
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: PrimaryColor,
       body: Stack(
         children: [
-          Positioned(child :Image.asset('assets/splash.png'))
-
+          Center(
+            child: Image.asset(Assets.splashText ,width: 271,),
+          ),
+          Positioned(
+              top: 100,
+              left: 50,
+              child: Image.asset(
+                Assets.splashRight,
+               height: 200,
+              )),
+          Positioned(
+              bottom: 110,
+              right: 20,
+              child: Image.asset(
+                Assets.splashBottom,
+               height: 200,
+              ))
         ],
       ),
     );

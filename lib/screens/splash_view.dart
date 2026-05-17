@@ -1,6 +1,9 @@
 import 'package:app_project_singin/constant.dart';
+<<<<<<< HEAD
 import 'package:app_project_singin/generated/assets.dart';
 import 'package:app_project_singin/screens/onboarding.dart';
+=======
+>>>>>>> 7db7b0b64dcf3dce3797db68b57913772eaad71b
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -26,6 +29,7 @@ class _SplashViewState extends State<SplashView> {
       backgroundColor: PrimaryColor,
       body: Stack(
         children: [
+<<<<<<< HEAD
           Center(
             child: Image.asset(Assets.splashText ,width: 271,),
           ),
@@ -43,6 +47,10 @@ class _SplashViewState extends State<SplashView> {
                 Assets.splashBottom,
                height: 200,
               ))
+=======
+          Positioned(child :Image.asset('assets/splash.png'))
+
+>>>>>>> 7db7b0b64dcf3dce3797db68b57913772eaad71b
         ],
       ),
     );

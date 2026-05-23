@@ -46,22 +46,32 @@ class _LoginScreenState extends State<LoginScreen> {
                 suffixIcon: Icons.visibility_off,
                 hinitText: 'Enter Your Password'),
             Gap(10),
-            Row(
-              children: [
-                Row(
-                  children: [
-                    Transform.scale(
-                      scale: 0.7,
-                      child: Checkbox(
-                          value: isChecked,
-                          onChanged: (value) {
-                            value = isChecked!;
-                            setState(() {});
-                          }),
-                    )
-                  ],
-                )
-              ],
+            Padding(
+
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      Transform.scale(
+                        scale: 0.7,
+                        child: Checkbox(
+                            value: isChecked,
+                            onChanged: (value) {
+                              isChecked = value!;
+                              setState(() {});
+                            }),
+                      ),
+                      Text(
+                        'Remember me',
+                        style: GoogleFonts.poppins(fontSize: 9),
+                      )
+                    ],
+                  ) ,
+                  const Text('Forget password ?' ,style: TextStyle(color: Colors.red ,fontSize: 9),)
+                ],
+              ),
             )
           ],
         ),

@@ -1,4 +1,4 @@
-import 'package:app_project_singin/screens/splash_view.dart';
+import 'package:app_project_singin/presestation/screens/splash_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
